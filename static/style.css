@@ -1,0 +1,141 @@
+body {
+    background: #000;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Unageo', sans-serif;
+    color: #fff;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: none;
+    transform: none;
+    transition: background-image 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    background: radial-gradient(50.36% 111.8% at 0% 100%, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.clock {
+    color: #FFF;
+    text-align: left;
+    font-family: Unageo;
+    font-size: 8em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 500px;
+    max-width: 90%;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.image {
+    width: 174px;
+    height: 174px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 174px;
+    flex-grow: 1;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+    transition: width 0.5s linear;
+}
+
+.title-name {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    width: fit-content;
+}
+
+.artist-name {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.80);
+    margin: 0;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .player {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .song-details {
+        text-align: center;
+    }
+}
